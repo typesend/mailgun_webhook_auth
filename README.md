@@ -27,7 +27,6 @@ It expects your private mailgun API token String to be passed at initialization.
 ```elixir
 
 pipeline :webhooks do
-  plug :accepts, ["json"]
 	plug MailgunWebhookAuth,
 				api_token: Application.get_env(:your_application, :mailgun_key)
 end
