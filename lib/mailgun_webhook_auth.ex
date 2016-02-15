@@ -11,8 +11,7 @@ defmodule MailgunWebhookAuth do
 	
 	## Example Phoenix.Router
 	
-			pipeline :webhooks do
-		    plug :accepts, ["json"]
+		  pipeline :webhooks do
 				plug MailgunWebhookAuth,
 							api_token: Application.get_env(:your_application, :mailgun_key)
 		  end
